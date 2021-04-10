@@ -6,5 +6,10 @@ class ApplicationController < Sinatra::Base
     set :public_folder, 'public'
     set :views, 'app/views'
   end
+  
+  get '/' do
+    Helpers.set_webpage('index')
+    erb :index 
+  end
 
 end
